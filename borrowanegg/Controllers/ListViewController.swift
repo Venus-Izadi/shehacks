@@ -29,11 +29,11 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        
+        self.title = "Groups"
         let image = UIImage(named:"status")
         var imageView = UIImageView(frame: CGRectMake(0, 20, self.view.frame.width, 120))
         imageView.image = image
-
-
         
         let statusBarImage = UIImage(named:"statusbar")
         var statusBarimageView = UIImageView(frame: CGRectMake(0, 140, self.view.frame.width, 120))
@@ -44,7 +44,7 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
         self.tableView.tableHeaderView?.addSubview(statusBarimageView)
         
         self.tableView.contentInset = UIEdgeInsetsMake(-40, 0, 0, 0);
-        self.navigationController?.navigationBar.hidden = true
+
         tableView.registerClass(UserCell.classForCoder(), forCellReuseIdentifier: "cell")
   
         tableView.delegate = self
@@ -66,6 +66,7 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
 
             let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UserCell
             cell.label.text = list[indexPath.row]
+            cell.isBorrow = true
             return cell
 
     }
@@ -73,11 +74,9 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-//        let row = indexPath.row
-//        let player = albums[row]
-//        let playerController = PlayerController()
-//        playerController.player = player
-//        self.navigationController?.pushViewController(playerController, animated:true)
+        let acceptController = AcceptViewController()
+        acceptController.cell = tableView.cellForRowAtIndexPath(indexPath) as! UserCell
+        self.navigationController!.pushViewController(acceptController, animated:true)
     }
     
 }

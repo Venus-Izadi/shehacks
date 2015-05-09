@@ -15,6 +15,7 @@
 		30A2432D1AFCFF4600E4053A /* GiveAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A2432C1AFCFF4600E4053A /* GiveAwayViewController.swift */; };
 		329F69E1BAFAB1B45AD8E488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8CA66F1AAF49933C1B2980 /* Images.xcassets */; };
 		351E6E07858E57B5C7D94F37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB54F1F0749625FAD73E71 /* Foundation.framework */; };
+		8D95004D1AFDB2EA00E3E797 /* AcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95004C1AFDB2EA00E3E797 /* AcceptViewController.swift */; };
 		C255DF0EAB065996FBAC4B00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4400ECB14B025B0476E68313 /* AppDelegate.swift */; };
 		E67BC0170C305ED860E9208E /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0190E2A8EBC8053EEA6F5328 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		51BB54F1F0749625FAD73E71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75ADF4E00EBB0B6D7FB99443 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8CA66F1AAF49933C1B2980 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8D95004C1AFDB2EA00E3E797 /* AcceptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptViewController.swift; sourceTree = "<group>"; };
 		97455826139AA64E1E4EA8F3 /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		A5CB8C5EA1D9639A7362B931 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F01257DF30B2801E5CCEE7 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				30A2432C1AFCFF4600E4053A /* GiveAwayViewController.swift */,
 				301BD0A01AFD008700826D28 /* BorrowViewController.swift */,
 				301BD0A21AFD978900826D28 /* UserCell.swift */,
+				8D95004C1AFDB2EA00E3E797 /* AcceptViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				C255DF0EAB065996FBAC4B00 /* AppDelegate.swift in Sources */,
 				E67BC0170C305ED860E9208E /* LaunchScreen.xib in Sources */,
 				301BD0A31AFD978900826D28 /* UserCell.swift in Sources */,
+				8D95004D1AFDB2EA00E3E797 /* AcceptViewController.swift in Sources */,
 				30A243291AFCFE4000E4053A /* ListViewController.swift in Sources */,
 				30A2432D1AFCFF4600E4053A /* GiveAwayViewController.swift in Sources */,
 				301BD0A11AFD008700826D28 /* BorrowViewController.swift in Sources */,

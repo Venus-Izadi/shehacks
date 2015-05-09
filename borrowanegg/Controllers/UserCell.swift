@@ -12,6 +12,7 @@ import UIKit
 class UserCell: UITableViewCell{
     var icon:UIImageView!
     var label:UILabel!
+    var isBorrow:Bool!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!)
     {
@@ -29,6 +30,7 @@ class UserCell: UITableViewCell{
         //Add TextField to SubView
         self.addSubview(icon)
         self.addSubview(label)
+        self.isBorrow = false
     }
     
 
