@@ -11,7 +11,7 @@
 		261EEA9D11175C223D03BD23 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CCC1B70C29977170E48A8489 /* Settings.bundle */; };
 		301BD0A11AFD008700826D28 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BD0A01AFD008700826D28 /* BorrowViewController.swift */; };
 		30A243291AFCFE4000E4053A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A243281AFCFE4000E4053A /* ListViewController.swift */; };
-		30A2432D1AFCFF4600E4053A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A2432C1AFCFF4600E4053A /* MapViewController.swift */; };
+		30A2432D1AFCFF4600E4053A /* GiveAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A2432C1AFCFF4600E4053A /* GiveAwayViewController.swift */; };
 		329F69E1BAFAB1B45AD8E488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8CA66F1AAF49933C1B2980 /* Images.xcassets */; };
 		351E6E07858E57B5C7D94F37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB54F1F0749625FAD73E71 /* Foundation.framework */; };
 		C255DF0EAB065996FBAC4B00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4400ECB14B025B0476E68313 /* AppDelegate.swift */; };
@@ -32,7 +32,7 @@
 		0190E2A8EBC8053EEA6F5328 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		301BD0A01AFD008700826D28 /* BorrowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
 		30A243281AFCFE4000E4053A /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		30A2432C1AFCFF4600E4053A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		30A2432C1AFCFF4600E4053A /* GiveAwayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiveAwayViewController.swift; sourceTree = "<group>"; };
 		3809E540CF7E0F7FF5ABB9E4 /* borrowanegg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = borrowanegg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4400ECB14B025B0476E68313 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51BB54F1F0749625FAD73E71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -138,7 +138,7 @@
 			children = (
 				4400ECB14B025B0476E68313 /* AppDelegate.swift */,
 				30A243281AFCFE4000E4053A /* ListViewController.swift */,
-				30A2432C1AFCFF4600E4053A /* MapViewController.swift */,
+				30A2432C1AFCFF4600E4053A /* GiveAwayViewController.swift */,
 				301BD0A01AFD008700826D28 /* BorrowViewController.swift */,
 			);
 			path = Controllers;
@@ -400,7 +400,7 @@
 				C255DF0EAB065996FBAC4B00 /* AppDelegate.swift in Sources */,
 				E67BC0170C305ED860E9208E /* LaunchScreen.xib in Sources */,
 				30A243291AFCFE4000E4053A /* ListViewController.swift in Sources */,
-				30A2432D1AFCFF4600E4053A /* MapViewController.swift in Sources */,
+				30A2432D1AFCFF4600E4053A /* GiveAwayViewController.swift in Sources */,
 				301BD0A11AFD008700826D28 /* BorrowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

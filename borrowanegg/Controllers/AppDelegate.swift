@@ -23,11 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let list = UINavigationController()
             list.pushViewController( ListViewController(), animated: false)
-            let map = MapViewController()
+            let giveAway = GiveAwayViewController()
             
             let borrow = BorrowViewController()
             
-            let controllers = [borrow, list, map ]
+            let controllers = [borrow, giveAway, list ]
             tabBarController.view.frame = screenSize
             tabBarController.viewControllers = controllers
             
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //  let firstImage = UIImage(named: &amp;quot;pie bar icon&amp;quot;)
             // let secondImage = UIImage(named: &amp;quot;pizza bar icon&amp;quot;)
             list.tabBarItem = UITabBarItem(title: "List", image: nil, tag: 3)
-            map.tabBarItem = UITabBarItem(title: "Map", image: nil, tag:2)
+            giveAway.tabBarItem = UITabBarItem(title: "Give Away", image: nil, tag:2)
             borrow.tabBarItem = UITabBarItem(title: "Borrow", image: nil, tag:1)
             
             window.makeKeyAndVisible()

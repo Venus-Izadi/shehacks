@@ -1,15 +1,16 @@
 //
-//  BorrowViewController.swift
-//  borrowanegg
+//  MapViewController.swift
+//  learnSwift
 //
-//  Created by Alexandra Luca on 9/05/2015.
+//  Created by Alexandra Luca on 10/04/2015.
 //  Copyright (c) 2015 thoughtworks. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import MapKit
 
-class BorrowViewController: UIViewController {
+class GiveAwayViewController: UIViewController {
+    
     
     var label: UILabel!
     var textInput : UITextField!
@@ -26,12 +27,12 @@ class BorrowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 0, green: 77/255, blue: 64/255, alpha: 1)
         label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
-
-        label.text = "I need";
+        
+        label.text = "Who needs";
         
         textInput = UITextField(frame: CGRectMake(0, 0, 200, 21))
         textInput.center = CGPointMake(160, 320)
@@ -52,14 +53,14 @@ class BorrowViewController: UIViewController {
         button   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         button.frame = CGRectMake(100, 100, 100, 100)
         button.center = CGPointMake(160, 400)
-        button.setTitle("Borrow", forState: UIControlState.Normal)
+        button.setTitle("Give Away", forState: UIControlState.Normal)
         button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY)
-       // let image = UIImage(named: "borrow") as UIImage!
-      //  button.setImage(image, forState: UIControlState.Normal)
+        // let image = UIImage(named: "borrow") as UIImage!
+        //  button.setImage(image, forState: UIControlState.Normal)
         button.addTarget(self, action: "borrow:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
-       // button.titleLabel! = UILabel()
+        // button.titleLabel! = UILabel()
         
         
         self.view.addSubview(label!)
@@ -75,6 +76,4 @@ class BorrowViewController: UIViewController {
         alertView.message = "Wait for somebody";
         alertView.show();
     }
-
-    
 }
