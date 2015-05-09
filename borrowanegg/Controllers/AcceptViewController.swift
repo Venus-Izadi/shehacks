@@ -57,7 +57,13 @@ class AcceptViewController: UIViewController {
         button.frame = CGRectMake(100, 100, 200, 50)
         //  button.setTitle("Borrow", forState: UIControlState.Normal)
         button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY+50)
-        let borrow = UIImage(named: "barrow")     //   button.backgroundColor = UIColor.whiteColor()
+        var imageName = "barrow"
+        if (cell.isBorrow!) {
+            imageName = "barrow"
+        } else {
+            imageName = "giveaway"
+        }
+        let borrow = UIImage(named: imageName)     //   button.backgroundColor = UIColor.whiteColor()
         button.setImage(borrow, forState: UIControlState.Normal)
         button.addTarget(self, action: "borrow:", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -78,8 +84,8 @@ class AcceptViewController: UIViewController {
     func borrow(sender :UIButton){
         var alertView = UIAlertView();
         alertView.addButtonWithTitle("Ok");
-        alertView.title = "Borrow";
-        alertView.message = "Your request was send";
+        alertView.title = "Done!";
+        alertView.message = "Let's connect you together!";
         alertView.show();
         self.navigationController?.popViewControllerAnimated(true)
     }

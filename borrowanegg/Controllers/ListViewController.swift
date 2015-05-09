@@ -24,6 +24,7 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
                            "James needs a cap of flour",
                            "Svetlana would like to give away 3 apples",
                            "Mary would like to give away 3 eggs"]
+    var borrowers: [Bool] = [true, false, false, true, true]
   
     
     override func viewDidLoad() {
@@ -66,7 +67,7 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
 
             let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UserCell
             cell.label.text = list[indexPath.row]
-            cell.isBorrow = true
+            cell.isBorrow = borrowers[indexPath.row]
             return cell
 
     }
