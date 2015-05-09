@@ -34,7 +34,7 @@ class GiveAwayViewController: UIViewController,UITextFieldDelegate {
         imageView.image = image
         self.view.addSubview(imageView)
     
-        imageText = UIImageView(frame: CGRectMake(0, 0, 200, 60))
+        imageText = UIImageView(frame: CGRectMake(0, 0, 250, 60))
         imageText.image = UIImage(named:"givetext")
         imageText.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
         
@@ -46,7 +46,7 @@ class GiveAwayViewController: UIViewController,UITextFieldDelegate {
         textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-30)
         textInput.delegate = self
         button   = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        button.frame = CGRectMake(100, 100, 200, 50)
+        button.frame = CGRectMake(100, 100, 250, 50)
         button.center = CGPointMake(160, 400)
     
         button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY+50)
