@@ -65,8 +65,8 @@ class GiveAwayViewController: UIViewController,UITextFieldDelegate {
     func borrow(sender :UIButton){
         var alertView = UIAlertView();
         alertView.addButtonWithTitle("Ok");
-        alertView.title = "title";
-        alertView.message = "Wait for somebody";
+        alertView.title = "Done!";
+        alertView.message = "Let's see who needs it";
         alertView.show();
     }
     

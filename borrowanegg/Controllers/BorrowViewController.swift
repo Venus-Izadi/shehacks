@@ -73,8 +73,8 @@ class BorrowViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
     func borrow(sender :UIButton){
         var alertView = UIAlertView();
         alertView.addButtonWithTitle("Ok");
-        alertView.title = "Borrow";
-        alertView.message = "Your request was send";
+        alertView.title = "Done";
+        alertView.message = "Let's see who can help you";
         alertView.show();
     }
     
