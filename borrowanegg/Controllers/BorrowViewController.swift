@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BorrowViewController: UIViewController {
+class BorrowViewController: UIViewController, UITextViewDelegate {
     
     var label: UILabel!
     var textInput : UITextField!
@@ -31,8 +31,7 @@ class BorrowViewController: UIViewController {
         var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, 120))
         imageView.image = image
         self.view.addSubview(imageView)
-        
-        label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+               label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
 
@@ -43,6 +42,7 @@ class BorrowViewController: UIViewController {
         textInput.textAlignment = NSTextAlignment.Center
         textInput.font = UIFont(name: "systemFont", size: 30)
         textInput.placeholder = "Type the ingredient and quantity"
+        textInput.delegate = self
 
         
         // This is the default setting but be explicit anyway...
@@ -79,6 +79,11 @@ class BorrowViewController: UIViewController {
         alertView.title = "Borrow";
         alertView.message = "Your request was send";
         alertView.show();
+    }
+    
+    func textViewShouldReturn(textView: UITextView) -> Bool {
+        self.view.endEditing(true);
+        return true;
     }
 
     
