@@ -10,6 +10,7 @@
 		2521C5E8E453B1EAA11837C4 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CB8C5EA1D9639A7362B931 /* libPods-unit_tests.a */; };
 		261EEA9D11175C223D03BD23 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CCC1B70C29977170E48A8489 /* Settings.bundle */; };
 		301BD0A11AFD008700826D28 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BD0A01AFD008700826D28 /* BorrowViewController.swift */; };
+		301BD0A31AFD978900826D28 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BD0A21AFD978900826D28 /* UserCell.swift */; };
 		30A243291AFCFE4000E4053A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A243281AFCFE4000E4053A /* ListViewController.swift */; };
 		30A2432D1AFCFF4600E4053A /* GiveAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A2432C1AFCFF4600E4053A /* GiveAwayViewController.swift */; };
 		329F69E1BAFAB1B45AD8E488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8CA66F1AAF49933C1B2980 /* Images.xcassets */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		0190E2A8EBC8053EEA6F5328 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		301BD0A01AFD008700826D28 /* BorrowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
+		301BD0A21AFD978900826D28 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		30A243281AFCFE4000E4053A /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		30A2432C1AFCFF4600E4053A /* GiveAwayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiveAwayViewController.swift; sourceTree = "<group>"; };
 		3809E540CF7E0F7FF5ABB9E4 /* borrowanegg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = borrowanegg.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				30A243281AFCFE4000E4053A /* ListViewController.swift */,
 				30A2432C1AFCFF4600E4053A /* GiveAwayViewController.swift */,
 				301BD0A01AFD008700826D28 /* BorrowViewController.swift */,
+				301BD0A21AFD978900826D28 /* UserCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			files = (
 				C255DF0EAB065996FBAC4B00 /* AppDelegate.swift in Sources */,
 				E67BC0170C305ED860E9208E /* LaunchScreen.xib in Sources */,
+				301BD0A31AFD978900826D28 /* UserCell.swift in Sources */,
 				30A243291AFCFE4000E4053A /* ListViewController.swift in Sources */,
 				30A2432D1AFCFF4600E4053A /* GiveAwayViewController.swift in Sources */,
 				301BD0A11AFD008700826D28 /* BorrowViewController.swift in Sources */,

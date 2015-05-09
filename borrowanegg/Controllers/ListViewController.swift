@@ -19,18 +19,28 @@ import UIKit
 
 class ListViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
+     var list: [String] = ["", "Milk"]
   
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
-//        self.tableView.registerNib(UINib(nibName: "PlayerCell", bundle: nil), forCellReuseIdentifier: "PlayerCell")
+        let image = UIImage(named:"status")
+        var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width+10, 120))
+        imageView.image = image
+
+        self.tableView.tableHeaderView = imageView
+        self.tableView.tableHeaderView!.frame = CGRectMake(0, 0, self.view.frame.width+10, 130)
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(-40, -10, 0, 0);
+        self.navigationController?.navigationBar.hidden = true
+        tableView.registerClass(UserCell.classForCoder(), forCellReuseIdentifier: "cell")
+  
         
         
-        self.title = "My List"
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         
     }
     
@@ -38,16 +48,43 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
         return 5
     }
     
+    
+  
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if (indexPath.row == 0){
+            return 120
+        }
+      return 60
+        
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)  {
+        if (indexPath.row == 0){
+            cell.separatorInset = UIEdgeInsetsZero
+            cell.preservesSuperviewLayoutMargins = false
+            cell.layoutMargins = UIEdgeInsetsZero
+            
+        }
+        
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-//        let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell") as! PlayerCell
-//        
-//        
-//        let album = albums[indexPath.row] as Album
-//        cell.title.text = album.title
-//        cell.userId.text = String(album.userId)
-//        // cell.ratingImageView.image = imageForRating(player.rating)
-//        return cell
-        return UITableViewCell()
+        if (indexPath.row == 0) {
+            // profile image
+          
+            let cell = UITableViewCell()
+          
+            let image = UIImage(named: "statusbar")
+            cell.imageView!.image  = image
+            return cell
+            
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UserCell
+            cell.label.text = "Lalala"
+            return cell
+
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

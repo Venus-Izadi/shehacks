@@ -27,7 +27,13 @@ class GiveAwayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0, green: 77/255, blue: 64/255, alpha: 1)
+        
+        self.view.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+        let image = UIImage(named:"status")
+        var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, 120))
+        imageView.image = image
+        self.view.addSubview(imageView)
+    
         label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
@@ -38,7 +44,8 @@ class GiveAwayViewController: UIViewController {
         textInput.center = CGPointMake(160, 320)
         textInput.textAlignment = NSTextAlignment.Center
         textInput.placeholder = "Type the ingredient and quantity"
-        
+      
+  
         
         // This is the default setting but be explicit anyway...
         label.setTranslatesAutoresizingMaskIntoConstraints(true)
@@ -47,8 +54,8 @@ class GiveAwayViewController: UIViewController {
             UIViewAutoresizing.FlexibleRightMargin |
             UIViewAutoresizing.FlexibleTopMargin |
             UIViewAutoresizing.FlexibleBottomMargin
-        label.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-200)
-        textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
+        label.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
+        textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-50)
         
         button   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         button.frame = CGRectMake(100, 100, 100, 100)

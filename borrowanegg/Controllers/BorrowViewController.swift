@@ -27,6 +27,11 @@ class BorrowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+        let image = UIImage(named:"status")
+        var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, 120))
+        imageView.image = image
+        self.view.addSubview(imageView)
+        
         label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
@@ -36,8 +41,9 @@ class BorrowViewController: UIViewController {
         textInput = UITextField(frame: CGRectMake(0, 0, 200, 21))
         textInput.center = CGPointMake(160, 320)
         textInput.textAlignment = NSTextAlignment.Center
+        textInput.font = UIFont(name: "systemFont", size: 30)
         textInput.placeholder = "Type the ingredient and quantity"
-        
+
         
         // This is the default setting but be explicit anyway...
         label.setTranslatesAutoresizingMaskIntoConstraints(true)
@@ -46,16 +52,16 @@ class BorrowViewController: UIViewController {
             UIViewAutoresizing.FlexibleRightMargin |
             UIViewAutoresizing.FlexibleTopMargin |
             UIViewAutoresizing.FlexibleBottomMargin
-        label.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-200)
-        textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
+        label.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
+        textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-50)
         
         button   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         button.frame = CGRectMake(100, 100, 100, 100)
         button.center = CGPointMake(160, 400)
-        button.setTitle("Borrow", forState: UIControlState.Normal)
+      //  button.setTitle("Borrow", forState: UIControlState.Normal)
         button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY)
-       // let image = UIImage(named: "borrow") as UIImage!
-      //  button.setImage(image, forState: UIControlState.Normal)
+        let image = UIImage(named: "borrow")
+        button.setImage(image, forState: UIControlState.Normal)
         button.addTarget(self, action: "borrow:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
@@ -71,8 +77,8 @@ class BorrowViewController: UIViewController {
     func borrow(sender :UIButton){
         var alertView = UIAlertView();
         alertView.addButtonWithTitle("Ok");
-        alertView.title = "title";
-        alertView.message = "Wait for somebody";
+        alertView.title = "Borrow";
+        alertView.message = "Your request was send";
         alertView.show();
     }
 
