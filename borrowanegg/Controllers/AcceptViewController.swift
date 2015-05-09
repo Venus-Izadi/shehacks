@@ -28,7 +28,7 @@ class AcceptViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
-        
+                
         if(cell.isBorrow!) {
             self.title = "Can I borrow?"
         } else {

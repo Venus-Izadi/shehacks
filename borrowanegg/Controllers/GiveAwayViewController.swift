@@ -68,6 +68,9 @@ class GiveAwayViewController: UIViewController,UITextFieldDelegate {
         alertView.title = "Done!";
         alertView.message = "Let's see who needs it";
         alertView.show();
+        alertView.delegate = self
+        textInput.text = ""
+        self.tabBarController?.selectedIndex = 2
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool{

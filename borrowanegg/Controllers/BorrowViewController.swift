@@ -76,6 +76,8 @@ class BorrowViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
         alertView.title = "Done";
         alertView.message = "Let's see who can help you";
         alertView.show();
+        textInput.text = ""
+        self.tabBarController?.selectedIndex = 2
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool{
