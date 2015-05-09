@@ -30,16 +30,16 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
         super.viewDidLoad();
         
         let image = UIImage(named:"status")
-        var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, 120))
+        var imageView = UIImageView(frame: CGRectMake(0, 20, self.view.frame.width, 120))
         imageView.image = image
 
 
         
         let statusBarImage = UIImage(named:"statusbar")
-        var statusBarimageView = UIImageView(frame: CGRectMake(0, 120, self.view.frame.width, 120))
+        var statusBarimageView = UIImageView(frame: CGRectMake(0, 140, self.view.frame.width, 120))
         statusBarimageView.image = statusBarImage
         
-        self.tableView.tableHeaderView = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 240))
+        self.tableView.tableHeaderView = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 260))
         self.tableView.tableHeaderView?.addSubview(imageView)
         self.tableView.tableHeaderView?.addSubview(statusBarimageView)
         
