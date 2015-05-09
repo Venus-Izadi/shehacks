@@ -19,9 +19,12 @@ class UserCell: UITableViewCell{
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         //Initialize Text Field
-        self.label = UILabel(frame: CGRect(x: 60.00, y: 9, width: 216.00, height: 31.00));
+        self.label = UILabel(frame: CGRect(x: 60.00, y: 0, width: 216.00, height: 80));
+        self.label.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.label.numberOfLines = 2
+        self.label.textColor = UIColor(red: 0, green: 64/255, blue: 77/255, alpha: 1)
         let image = UIImage(named:"egg")
-        self.icon = UIImageView(frame: CGRect(x: 15, y: 10, width: 30, height: 30))
+        self.icon = UIImageView(frame: CGRect(x: 15, y: 20, width: 30, height: 30))
         self.icon.image = image
         //Add TextField to SubView
         self.addSubview(icon)

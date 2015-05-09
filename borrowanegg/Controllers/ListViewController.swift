@@ -43,7 +43,7 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
         self.tableView.tableHeaderView?.addSubview(imageView)
         self.tableView.tableHeaderView?.addSubview(statusBarimageView)
         
-        self.tableView.contentInset = UIEdgeInsetsMake(-40, 10, 0, 0);
+        self.tableView.contentInset = UIEdgeInsetsMake(-40, 0, 0, 0);
         self.navigationController?.navigationBar.hidden = true
         tableView.registerClass(UserCell.classForCoder(), forCellReuseIdentifier: "cell")
   
@@ -65,7 +65,7 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
 
             let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UserCell
-            cell.label.text = "Lalala"
+            cell.label.text = list[indexPath.row]
             return cell
 
     }
