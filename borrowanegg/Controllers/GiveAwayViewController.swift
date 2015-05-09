@@ -57,14 +57,14 @@ class GiveAwayViewController: UIViewController {
         label.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
         textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-50)
         
-        button   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        button.frame = CGRectMake(100, 100, 100, 100)
+        button   = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        button.frame = CGRectMake(100, 100, 200, 50)
         button.center = CGPointMake(160, 400)
-        button.setTitle("Give Away", forState: UIControlState.Normal)
-        button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY)
-        // let image = UIImage(named: "borrow") as UIImage!
-        //  button.setImage(image, forState: UIControlState.Normal)
-        button.addTarget(self, action: "borrow:", forControlEvents: UIControlEvents.TouchUpInside)
+      //  button.setTitle("Give Away", forState: UIControlState.Normal)
+        button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY+50)
+        let borrow = UIImage(named: "giveaway")     //   button.backgroundColor = UIColor.whiteColor()
+        button.setImage(borrow, forState: UIControlState.Normal)
+         button.addTarget(self, action: "borrow:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
         // button.titleLabel! = UILabel()

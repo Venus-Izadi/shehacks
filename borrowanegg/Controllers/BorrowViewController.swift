@@ -58,7 +58,7 @@ class BorrowViewController: UIViewController {
         button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         button.frame = CGRectMake(100, 100, 200, 50)
      //  button.setTitle("Borrow", forState: UIControlState.Normal)
-        button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY)
+        button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY+50)
         let borrow = UIImage(named: "barrow")     //   button.backgroundColor = UIColor.whiteColor()
         button.setImage(borrow, forState: UIControlState.Normal)
         button.addTarget(self, action: "borrow:", forControlEvents: UIControlEvents.TouchUpInside)
