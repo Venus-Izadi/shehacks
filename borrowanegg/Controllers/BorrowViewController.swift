@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class BorrowViewController: UIViewController, UITextViewDelegate {
-    
-    var label: UILabel!
+class BorrowViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+
+    var imageText: UIImageView!
     var textInput : UITextField!
     var button:UIButton!
     
@@ -27,15 +27,17 @@ class BorrowViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+      
         let image = UIImage(named:"status")
         var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, 120))
         imageView.image = image
+        
         self.view.addSubview(imageView)
-               label = UILabel(frame: CGRectMake(0, 0, 200, 21))
-        label.center = CGPointMake(160, 284)
-        label.textAlignment = NSTextAlignment.Center
-
-        label.text = "I need";
+        
+        
+        imageText = UIImageView(frame: CGRectMake(0, 0, 200, 60))
+        imageText.image = UIImage(named:"borrowtext")
+        imageText.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
         
         textInput = UITextField(frame: CGRectMake(0, 0, 200, 21))
         textInput.center = CGPointMake(160, 320)
@@ -45,19 +47,14 @@ class BorrowViewController: UIViewController, UITextViewDelegate {
         textInput.delegate = self
 
         
-        // This is the default setting but be explicit anyway...
-        label.setTranslatesAutoresizingMaskIntoConstraints(true)
-        
-        label.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin |
-            UIViewAutoresizing.FlexibleRightMargin |
-            UIViewAutoresizing.FlexibleTopMargin |
-            UIViewAutoresizing.FlexibleBottomMargin
-        label.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
-        textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-50)
+ 
+       
+       
+        textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-30)
         
         button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         button.frame = CGRectMake(100, 100, 200, 50)
-     //  button.setTitle("Borrow", forState: UIControlState.Normal)
+    
         button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY+50)
         let borrow = UIImage(named: "barrow")     //   button.backgroundColor = UIColor.whiteColor()
         button.setImage(borrow, forState: UIControlState.Normal)
@@ -67,7 +64,7 @@ class BorrowViewController: UIViewController, UITextViewDelegate {
        // button.titleLabel! = UILabel()
         
         
-        self.view.addSubview(label!)
+        self.view.addSubview(imageText!)
         self.view.addSubview(textInput!)
         self.view.addSubview(button!)
         
@@ -81,8 +78,8 @@ class BorrowViewController: UIViewController, UITextViewDelegate {
         alertView.show();
     }
     
-    func textViewShouldReturn(textView: UITextView) -> Bool {
-        self.view.endEditing(true);
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+    self.view.endEditing(true);
         return true;
     }
 

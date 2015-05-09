@@ -9,10 +9,10 @@
 import UIKit
 import MapKit
 
-class GiveAwayViewController: UIViewController {
+class GiveAwayViewController: UIViewController,UITextFieldDelegate {
     
     
-    var label: UILabel!
+     var imageText: UIImageView!
     var textInput : UITextField!
     var button:UIButton!
     
@@ -34,43 +34,29 @@ class GiveAwayViewController: UIViewController {
         imageView.image = image
         self.view.addSubview(imageView)
     
-        label = UILabel(frame: CGRectMake(0, 0, 200, 21))
-        label.center = CGPointMake(160, 284)
-        label.textAlignment = NSTextAlignment.Center
-        
-        label.text = "Who needs";
+        imageText = UIImageView(frame: CGRectMake(0, 0, 200, 60))
+        imageText.image = UIImage(named:"givetext")
+        imageText.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
         
         textInput = UITextField(frame: CGRectMake(0, 0, 200, 21))
         textInput.center = CGPointMake(160, 320)
         textInput.textAlignment = NSTextAlignment.Center
         textInput.placeholder = "Type the ingredient and quantity"
-      
-  
-        
-        // This is the default setting but be explicit anyway...
-        label.setTranslatesAutoresizingMaskIntoConstraints(true)
-        
-        label.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin |
-            UIViewAutoresizing.FlexibleRightMargin |
-            UIViewAutoresizing.FlexibleTopMargin |
-            UIViewAutoresizing.FlexibleBottomMargin
-        label.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-100)
-        textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-50)
-        
+       
+        textInput.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY-30)
+        textInput.delegate = self
         button   = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         button.frame = CGRectMake(100, 100, 200, 50)
         button.center = CGPointMake(160, 400)
-      //  button.setTitle("Give Away", forState: UIControlState.Normal)
+    
         button.center = CGPointMake(self.view.bounds.midX, self.view.bounds.midY+50)
-        let borrow = UIImage(named: "giveaway")     //   button.backgroundColor = UIColor.whiteColor()
+        let borrow = UIImage(named: "giveaway")     //   button.backgroundColor =
         button.setImage(borrow, forState: UIControlState.Normal)
          button.addTarget(self, action: "borrow:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
-        // button.titleLabel! = UILabel()
         
-        
-        self.view.addSubview(label!)
+        self.view.addSubview(imageText!)
         self.view.addSubview(textInput!)
         self.view.addSubview(button)
         
@@ -82,5 +68,10 @@ class GiveAwayViewController: UIViewController {
         alertView.title = "title";
         alertView.message = "Wait for somebody";
         alertView.show();
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        self.view.endEditing(true);
+        return true;
     }
 }
