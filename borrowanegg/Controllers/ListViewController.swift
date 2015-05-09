@@ -19,25 +19,34 @@ import UIKit
 
 class ListViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
-     var list: [String] = ["", "Milk"]
+     var list: [String] = ["Alexandra would like to give away some pasta",
+                           "Venus needs 1 tomato",
+                           "James needs a cap of flour",
+                           "Svetlana would like to give away 3 apples",
+                           "Mary would like to give away 3 eggs"]
   
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
         let image = UIImage(named:"status")
-        var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width+10, 120))
+        var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, 120))
         imageView.image = image
 
-        self.tableView.tableHeaderView = imageView
-        self.tableView.tableHeaderView!.frame = CGRectMake(0, 0, self.view.frame.width+10, 130)
+
         
-        self.tableView.contentInset = UIEdgeInsetsMake(-40, -10, 0, 0);
+        let statusBarImage = UIImage(named:"statusbar")
+        var statusBarimageView = UIImageView(frame: CGRectMake(0, 120, self.view.frame.width, 120))
+        statusBarimageView.image = statusBarImage
+        
+        self.tableView.tableHeaderView = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 240))
+        self.tableView.tableHeaderView?.addSubview(imageView)
+        self.tableView.tableHeaderView?.addSubview(statusBarimageView)
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(-40, 10, 0, 0);
         self.navigationController?.navigationBar.hidden = true
         tableView.registerClass(UserCell.classForCoder(), forCellReuseIdentifier: "cell")
   
-        
-        
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -47,44 +56,18 @@ class ListViewController: UITableViewController, UITableViewDataSource, UITableV
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
-    
-    
-  
-    
+ 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if (indexPath.row == 0){
-            return 120
-        }
-      return 60
-        
-    }
-    
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)  {
-        if (indexPath.row == 0){
-            cell.separatorInset = UIEdgeInsetsZero
-            cell.preservesSuperviewLayoutMargins = false
-            cell.layoutMargins = UIEdgeInsetsZero
-            
-        }
+      return 80
         
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        if (indexPath.row == 0) {
-            // profile image
-          
-            let cell = UITableViewCell()
-          
-            let image = UIImage(named: "statusbar")
-            cell.imageView!.image  = image
-            return cell
-            
-        } else {
+
             let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UserCell
             cell.label.text = "Lalala"
             return cell
 
-        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
