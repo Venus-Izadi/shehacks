@@ -62,14 +62,11 @@ class GiveAwayViewController: UIViewController,UITextFieldDelegate {
     }
     
     func borrow(sender :UIButton){
-        var alertView = UIAlertView();
-        alertView.addButtonWithTitle("Ok");
-        alertView.title = "Done!";
-        alertView.message = "Let's see who needs it";
-        alertView.show();
-        alertView.delegate = self
-        textInput.text = ""
         self.tabBarController?.selectedIndex = 2
+        var thankYou = ThankYou()
+        thankYou.isBorrow = false
+        self.presentViewController(thankYou, animated: true, completion: nil)
+        textInput.text = ""
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool{
