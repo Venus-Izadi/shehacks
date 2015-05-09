@@ -26,6 +26,9 @@ class BorrowViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addNotification();
+       
         self.view.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
       
         let image = UIImage(named:"status")
@@ -84,6 +87,18 @@ class BorrowViewController: UIViewController, UITextFieldDelegate, UIScrollViewD
     self.view.endEditing(true);
         return true;
     }
+    
+    func addNotification(){
+        var localNotification:UILocalNotification = UILocalNotification()
+        localNotification.repeatInterval = NSCalendarUnit.CalendarUnitSecond
+      //  localNotification.
+        localNotification.alertAction = "You're lucky"
+        localNotification.alertBody = "Svet can borrow you an egg!!"
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 1)
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
+
 
     
 }

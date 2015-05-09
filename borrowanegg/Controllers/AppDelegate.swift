@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool{
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-       
+      
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound |
+            UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
+        
+
         if let window = window {
             window.backgroundColor = UIColor.whiteColor()
             var navigationController = UINavigationController()
@@ -42,9 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             borrow.tabBarItem = UITabBarItem(title: "Borrow", image: nil, tag:1)
              borrow.tabBarItem.image =  UIImage(named:"borrowtab")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
             
+          
             window.makeKeyAndVisible()
-        }
+                  }
         return true
     }
-
+    
+   
 }

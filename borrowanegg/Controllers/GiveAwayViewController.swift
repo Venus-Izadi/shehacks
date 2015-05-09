@@ -27,7 +27,6 @@ class GiveAwayViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
         let image = UIImage(named:"status")
         var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, 120))
@@ -77,4 +76,6 @@ class GiveAwayViewController: UIViewController,UITextFieldDelegate {
         self.view.endEditing(true);
         return true;
     }
+    
+   
 }
